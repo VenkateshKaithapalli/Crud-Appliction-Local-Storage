@@ -19,26 +19,23 @@ const Login = () => {
 
 
 
+   const users=[{email:"venky@gmail.com",psw:'1234'},{email:'sunil@gmail.com',psw:'12345'}]
+
     const submitHandler=(e)=>{
         e.preventDefault()
-       
-        if(email!=='venky@gmail.com' || psw!=='1234' ){
-          alert('Invalid Data...')
-           return false;
-        }
-        else if(email==='' || psw===''){
-          alert('Invalid Data...')
-          return false;
-        }
-        else{
+       const location=users.find((user)=>user.email===email )
+        if(location && location.psw===psw ){
           localStorage.setItem('Email', JSON.stringify(email))
           localStorage.setItem('Password', JSON.stringify(psw))
           console.log(email,psw)
           navigate('/mainpage')
         }
+        else{
+          alert('Invalid Data...')
+          return false;
+        }
         
      }
-
 
   return (
     <div>
