@@ -1,0 +1,41 @@
+.dash_main{
+    display: flex;
+    flex-direction: column;
+    
+
+}
+
+.dash_add{
+   width:10%;
+   align-self: flex-end;
+}
+
+.dash_buttons{
+    
+    align-self: flex-end;
+}
+
+/* th{
+    color: blue;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  } */
+
+
+  .dash_container{
+        position: absolute;
+        top: 10vh;
+        left: 25%;
+       width: 100%;
+       height: auto;
+    
+  }
+
+  @media screen and (min-width:500px){
+      .dash_container{
+      width: 50%;
+      }
+  }
